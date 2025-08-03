@@ -49,7 +49,7 @@
 
   <section class="hero">
     <div class="hero-body">
-      <div class="container is-max-desktop">
+      <div class="container is-max-widescreen">
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">NeuroSync: Intent-Aware Code-Based Problem Solving via Direct LLM Understanding Modification</h2>
@@ -200,6 +200,9 @@
         </div>
         <div class="subtitle has-text-justified" style="max-width: 1200px; margin: 0 auto;">
           <p style="margin-bottom: 1rem;">
+            <strong>Why misalignment? </strong>
+          </p>
+          <p style="margin-bottom: 1rem;">
             Bidirectional ambiguity is a major cause of human-LLM misalignment in conversational coding tasks. During the conversation with LLM for coding tasks, ambiguity is bidirectional:
           </p>
           <p style="margin-bottom: 1rem;">
@@ -220,6 +223,9 @@
         </div>
         <div class="subtitle has-text-justified" style="max-width: 1200px; margin: 0 auto;">
           <p style="margin-bottom: 1rem;">
+            <strong>How to cross the dual nonlinearity?</strong>
+          </p>
+          <p style="margin-bottom: 1rem;">
             task graphs were consistently viewed as more helpful. Participants highlighted two key benefits:(1) Improved task comprehension through clear visualization of task dependencies and subgoals;  (2) Enhanced efficiency in locating key logic points and understanding overall code purpose.
           </p>
           <p>
@@ -227,20 +233,6 @@
           </p>
         </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
   </div>
 </div>
 </div>
@@ -248,7 +240,137 @@
 <!-- End image carousel -->
 
 
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">LLM Understanding and Intent-Task Direct Matching (Concept)</h2>
+      <div class="content has-text-centered">
+        <p class="subtitle is-5 has-text-justified">
+          Inspired by the concept of <strong>understanding</strong>, where humans develop their interpretation of LLM outputs, we suggest that LLMs form a kind of understanding of user inputs. We call this <strong>LLM understanding</strong>, which refers to the tasks and their relationships implicitly encoded in the code that an LLM is expected to generate based on user prompts.        </p>
+        <p class="subtitle is-5 has-text-justified">
+          We propose a new human–LLM interaction paradigm, <strong>direct intent–task matching</strong>, based on externalizing and modifying LLM understanding organized in graphs prior to code generation.
+        </p>
+      </div>
+      
+      <!-- Single image -->
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="static/images/concept.png" alt="Concept" style="width: 60%; height: auto;"/>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
 
+<!-- Image carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Overview of NeuroSync</h2>
+      <div class="content has-text-centered">
+        <p class="subtitle is-5 has-text-justified">
+Overview of \tool, a proof-of-concept implementation of the <strong>direct intent–task matching</strong> paradigm. \tool takes user prompts as input, extracts the <em>LLM understanding</em>, enables users to refine this understanding through graph-based visualizations, and feeds the refined understanding back to the LLM to generate code that more accurately aligns with user intents.        </p>
+      </div>
+      
+
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="static/images/system_overview.png" alt="Concept" style="width: 60%; height: auto;"/>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End image carousel -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">NeuroSync</h2>
+      <div class="content has-text-centered">
+        <!-- <p class="subtitle is-5 has-text-justified">
+          To examine the causes of human–LLM misalignment in conversational coding and inform system design, we conducted a formative study with domain users who have little coding experiences. The study included (1) interaction history analysis and interviews to uncover misalignment patterns, and (2) semi-structured interviews, informed by a literature review, to explore effective representations of graphs for conveying code tasks and user intent. 
+        </p> -->
+        <p class="subtitle is-5 has-text-justified">
+<strong>NeuroSync</strong> allows a user to directly manipulate a visual task graph on two levels via the <strong>user interface</strong> to correct an LLM's understanding before code generation. This interaction is kept responsive by a lightweight <strong>distillation pipeline</strong>, which fine-tunes a small model using data from a <strong>multi-agent system</strong> that simulates user behavior. To manage cognitive load, an <strong>intent-aware graph simplification algorithm</strong> dynamically collapses and highlights parts of the graph based on the user's focus. </p>
+      </div>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <div style="text-align: center; margin: 20px 0;">
+          <img src="static/images/system_overview.png" alt="Formative Study" style="width: 50%; height: auto;"/>
+        </div>
+        <div class="subtitle has-text-justified" style="max-width: 1200px; margin: 0 auto;">
+          <p style="margin-bottom: 1rem;">
+            <strong>Overview of NeuroSync</strong>, a proof-of-concept implementation of the <strong>direct intent–task matching</strong> paradigm. NeuroSync takes user prompts as input, extracts the <em>LLM understanding</em>, enables users to refine this understanding through graph-based visualizations, and feeds the refined understanding back to the LLM to generate code that more accurately aligns with user intents.        
+          </p>
+        </div>
+      </div>
+       <div class="item">
+        <!-- Your image here -->
+        <div style="text-align: center; margin: 20px 0;">
+          <img src="static/images/interface_final_big_v1.png" alt="Formative Study" style="width: 50%; height: auto;"/>
+        </div>
+        <div class="subtitle has-text-justified" style="max-width: 1200px; margin: 0 auto;">
+          <p style="margin-bottom: 1rem;">
+<strong>User interaction</strong> in NeuroSync supports two-level graph modification before code generation. Users can perform precise node-level edits (e.g., adding/modifying nodes) or use natural language commands for broad, graph-level structural changes.
+        </div>
+      </div>
+
+       <div class="item">
+        <!-- Your image here -->
+        <div style="text-align: center; margin: 20px 0;">
+          <img src="static/images/usage_jindu_extrem_large_v2.png" alt="Formative Study" style="width: 50%; height: auto;"/>
+        </div>
+        <div class="subtitle has-text-justified" style="max-width: 1200px; margin: 0 auto;">
+          <p style="margin-bottom: 1rem;">
+            <strong>Interface of NeuroSync.</strong> Users interact with the LLM through Panel A (LLM Conversation Panel). Before each LLM response, the system generates an LLM understanding graph in Panel B (Understanding Graph Manipulation Panel) and a simplified version in Panel C (Intent–Task Mapping View). Users can edit the task graph in Panel B and explore task structures and intent alignment via Panel C.
+          </p>
+        </div>
+      </div>
+
+      <div class="item">
+        <!-- Your image here -->
+        <div style="text-align: center; margin: 20px 0;">
+          <img src="static/images/pipeline.png" alt="Formative Study" style="width: 50%; height: auto;"/>
+        </div>
+        <div class="subtitle has-text-justified" style="max-width: 1200px; margin: 0 auto;">
+          <p style="margin-bottom: 1rem;">
+            <strong>Triple Distillation Pipeline.</strong> It aligns the SLM in the student path with the two-stage extractor in the teacher path. The SLM can extract triples directly from prompts, bypassing intermediate code generation to speed up triple extraction.
+          </p>
+        </div>
+      </div>
+
+        <div class="item">
+        <!-- Your image here -->
+        <div style="text-align: center; margin: 20px 0;">
+          <img src="static/images/4_Reply_Pipeline.png" alt="Formative Study" style="width: 50%; height: auto;"/>
+        </div>
+        <div class="subtitle has-text-justified" style="max-width: 1200px; margin: 0 auto;">
+          <p style="margin-bottom: 1rem;">
+            <strong>Multi-Agent Module Overview.</strong> This module involves four agents designed to interact with each other, simulating a domain user's experience of leveraging an LLM for code generation based on our findings on user behavior patterns.
+          </p>
+        </div>
+      </div>
+
+        <div class="item">
+        <!-- Your image here -->
+        <div style="text-align: center; margin: 20px 0;">
+          <img src="static/images/graph_sim_v3.png" alt="Formative Study" style="width: 50%; height: auto;"/>
+        </div>
+        <div class="subtitle has-text-justified" style="max-width: 1200px; margin: 0 auto;">
+          <p style="margin-bottom: 1rem;">
+            <strong>Intent-aware graph simplification algorithm.</strong> The left figure illustrates an intent tree, where each node corresponds to a sub-understanding graph. During the simplification process, nodes that are mapped to changes in the intent tree are directly transferred to the simplified graph (\ie~red dashed box). Meanwhile, parts mapped to unchanged nodes are recursively collapsed or zoomed out (\ie~blue and green boxes).
+          </p>
+        </div>
+      </div>
+
+      </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
 
 <!-- Youtube video -->
 <section class="hero is-small is-light">
@@ -261,7 +383,7 @@
           
           <div class="publication-video">
             <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/watch?v=aM1DQt1hK0U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/aM1DQt1hK0U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -271,57 +393,6 @@
 <!-- End youtube video -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 <!--BibTex citation -->
