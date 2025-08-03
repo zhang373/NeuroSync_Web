@@ -165,7 +165,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h3>
+        <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
             Conversational LLMs have been widely adopted by domain users with limited programming experience to solve domain problems. However, these users often face misalignment between their intent and generated code, resulting in frustration and rounds of clarification. This work first investigates the cause of this misalignment, which dues to bidirectional ambiguity: both user intents and coding tasks are inherently nonlinear, yet must be expressed and interpreted through linear prompts and code sequences. To address this, we propose direct intent–task matching, a new human–LLM interaction paradigm that externalizes and enables direct manipulation of the LLM understanding, i.e., the coding tasks and their relationships inferred by the LLM prior to code generation. As a proof-of-concept, this paradigm is then implemented in NeuroSync, which employs a knowledge distillation pipeline to extract LLM understanding, user intents, and their mappings, and enhances the alignment by allowing users to intuitively inspect and edit them via visualizations. We evaluate the algorithmic components of NeuroSync via technical experiments, and assess its overall usability and effectiveness via a user study (N=12). The results show that it enhances intent–task alignment, lowers cognitive effort, and improves coding efficiency.
@@ -178,54 +178,24 @@
 <!-- End paper abstract -->
 
 
-
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Why Misalignment and How to Solve (Formative Study)</h2>
-      <div class="content has-text-centered">
-        <!-- <p class="subtitle is-5 has-text-justified">
-          To examine the causes of human–LLM misalignment in conversational coding and inform system design, we conducted a formative study with domain users who have little coding experiences. The study included (1) interaction history analysis and interviews to uncover misalignment patterns, and (2) semi-structured interviews, informed by a literature review, to explore effective representations of graphs for conveying code tasks and user intent. 
-        </p> -->
-        <p class="subtitle is-5 has-text-justified">
-          Bidirectional ambiguity is one important reason why misalignment occurs and graphs (node-link diagrams) are a good link between users's nonlinear intent and LLM's nonlinear code tasks.
-        </p>
-      </div>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <div style="text-align: center; margin: 20px 0;">
-          <img src="static/images/formative.png" alt="Formative Study" style="width: 50%; height: auto;"/>
-        </div>
-        <div class="subtitle has-text-justified" style="max-width: 1200px; margin: 0 auto;">
-          <p style="margin-bottom: 1rem;">
-            Bidirectional ambiguity is a major cause of human-LLM misalignment in conversational coding tasks. During the conversation with LLM for coding tasks, ambiguity is bidirectional:
-          </p>
-          <p style="margin-bottom: 1rem;">
-            <strong>(1) User-to-LLM:</strong> Users find it challenging to clearly express their needs and the information required by the LLM in their prompts. For example, converting tree-like intent in Fig. into prompt will lose direct structure and cause ambiguity.
-          </p>
-          <p style="margin-bottom: 1rem;">
-            <strong>(2) LLM-to-User:</strong> Users struggle to understand the specific tasks and execution logic embedded in the code, making it difficult to provide precise modification requests. For example, in Fig., users need to reconstruct codes and code relationships by themselves, which is difficult and low ability of understanding code will lead to ambiguity.
-          </p>
-          <p>
-            This bidirectional ambiguity compounds over turns, causing LLMs to produce code misaligned with user intent. As LLM capabilities grow and inference slows, the cost of these ineffective interactions increases.
-          </p>
-        </div>
+        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          First image description.
+        </h2>
       </div>
-       <div class="item">
+      <div class="item">
         <!-- Your image here -->
-        <div style="text-align: center; margin: 20px 0;">
-          <img src="static/images/phase2.png" alt="Formative Study" style="width: 80%; height: auto;"/>
-        </div>
-        <div class="subtitle has-text-justified" style="max-width: 1200px; margin: 0 auto;">
-          <p style="margin-bottom: 1rem;">
-            task graphs were consistently viewed as more helpful. Participants highlighted two key benefits:(1) Improved task comprehension through clear visualization of task dependencies and subgoals;  (2) Enhanced efficiency in locating key logic points and understanding overall code purpose.
-          </p>
-          <p>
-            However, as interaction rounds increased, graph complexity grew and negatively impacted interpretability. System need dynamic graph simplification methods.
-          </p>
-        </div>
+        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Second image description.
+        </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
@@ -261,7 +231,7 @@
           
           <div class="publication-video">
             <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/watch?v=aM1DQt1hK0U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://youtu.be/aM1DQt1hK0U?si=vV21gmcJyi0VDNNz" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
